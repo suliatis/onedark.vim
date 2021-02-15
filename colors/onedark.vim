@@ -194,7 +194,7 @@ call s:h("StorageClass", { "fg": s:yellow })
 call s:h("Structure", { "fg": s:yellow })
 call s:h("Typedef", { "fg": s:yellow })
 
-call s:h("Special", { "fg": s:blue })
+call s:h("Special", { "fg": s:yellow })
 call s:h("SpecialChar", { "fg": s:dark_yellow })
 call s:h("Tag", { "fg": s:white })
 call s:h("Delimiter", { "fg": s:white })
@@ -210,7 +210,29 @@ call s:h("Error", { "fg": s:red })
 call s:h("Todo", { "fg": s:white })
 " }}}
 
-" Language-Specific Highlighting {{{
+" Language-Specific Overrides {{{
+
+" Scala
+hi link scalaInterpolationBrackets String
+
+hi link scalaKeywordModifier Keyword
+hi link scalaInstanceHash Operator
+
+hi link scalaEscapedChar SpecialChar
+hi link scalaUnicodeChar SpecialChar
+hi link scalaInterpolationBoundary SpecialChar
+hi link scalaInterpolation SpecialChar
+hi link scalaFInterpolation SpecialChar
+hi link scalaSquareBrackets Delimiter
+hi link scalaSquareBracketsBrackets Delimiter
+
+hi link scalaCaseFollowing Normal
+hi link scalaTypeTypePostDeclaration Normal
+hi link scalaDocLinks Normal
+hi link scalaCommentCodeBlock Normal
+hi link scalaParamAnnotationValue Normal
+
+call s:h("scalaSpecial", { "fg": s:blue })
 
 " }}}
 
