@@ -322,9 +322,9 @@ call s:h("WildMenu", { "fg": s:black, "bg": s:blue }) " current match in 'wildme
 " Plugin Highlighting {{{
 
 " airblade/vim-gitgutter
-hi link GitGutterAdd    SignifySignAdd
-hi link GitGutterChange SignifySignChange
-hi link GitGutterDelete SignifySignDelete
+ call s:h("GitGutterAdd", { "fg": s:green })
+ call s:h("GitGutterChange", { "fg": s:yellow })
+ call s:h("GitGutterDelete", { "fg": s:red })
 
 " dense-analysis/ale
 call s:h("ALEError", { "fg": s:red, "gui": "underline", "cterm": "underline" })
