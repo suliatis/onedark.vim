@@ -202,7 +202,7 @@ call s:h("Structure", { "fg": s:type })
 call s:h("Typedef", { "fg": s:type })
 
 let s:special = s:yellow
-let s:special_char = s:dark_yellow
+let s:special_char = s:white
 let s:tag = s:white
 let s:delimeter = s:white
 let s:special_comment = s:white
@@ -226,6 +226,10 @@ let s:normal = s:white
 " }}}
 
 " Language-Specific Overrides {{{
+
+" Treesitter
+call s:h("TSVariableBuiltin", { "fg": s:red })
+call s:h("TSProperty", { "fg": s:dark_yellow })
 
 " Scala
 call s:h("scalaInterpolationBrackets", { "fg": s:string })
