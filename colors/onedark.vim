@@ -227,6 +227,27 @@ let s:normal = s:white
 
 " Language-Specific Overrides {{{
 
+" CSS
+ call s:h("cssAttrComma", { "fg": s:purple })
+ call s:h("cssAttributeSelector", { "fg": s:green })
+ call s:h("cssBraces", { "fg": s:white })
+ call s:h("cssClassName", { "fg": s:dark_yellow })
+ call s:h("cssClassNameDot", { "fg": s:dark_yellow })
+ call s:h("cssDefinition", { "fg": s:purple })
+ call s:h("cssFontAttr", { "fg": s:dark_yellow })
+ call s:h("cssFontDescriptor", { "fg": s:purple })
+ call s:h("cssFunctionName", { "fg": s:blue })
+ call s:h("cssIdentifier", { "fg": s:blue })
+ call s:h("cssImportant", { "fg": s:purple })
+ call s:h("cssInclude", { "fg": s:white })
+ call s:h("cssIncludeKeyword", { "fg": s:purple })
+ call s:h("cssMediaType", { "fg": s:dark_yellow })
+ call s:h("cssProp", { "fg": s:white })
+ call s:h("cssPseudoClassId", { "fg": s:dark_yellow })
+ call s:h("cssSelectorOp", { "fg": s:purple })
+ call s:h("cssSelectorOp2", { "fg": s:purple })
+ call s:h("cssTagName", { "fg": s:red })
+
 " Treesitter
 call s:h("TSVariableBuiltin", { "fg": s:red })
 call s:h("TSProperty", { "fg": s:dark_yellow })
