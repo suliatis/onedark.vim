@@ -163,41 +163,57 @@ let g:terminal_ansi_colors = [
 
 " Syntax Groups (descriptions and ordering from `:h w18`) {{{
 call s:h("Comment", { "fg": s:comment_grey, "gui": "italic", "cterm": "italic" })
+
 call s:h("Constant", { "fg": s:cyan })
+
 call s:h("String", { "fg": s:green })
 call s:h("Character", { "fg": s:green })
 call s:h("Number", { "fg": s:dark_yellow })
 call s:h("Boolean", { "fg": s:dark_yellow })
 call s:h("Float", { "fg": s:dark_yellow })
-call s:h("Identifier", { "fg": s:white })
+
+call s:h("Identifier", { "fg": s:red })
 call s:h("Function", { "fg": s:blue })
+
 call s:h("Statement", { "fg": s:purple })
 call s:h("Conditional", { "fg": s:purple })
 call s:h("Repeat", { "fg": s:purple })
 call s:h("Label", { "fg": s:purple })
-call s:h("Operator", { "fg": s:white })
+call s:h("Operator", { "fg": s:purple })
 call s:h("Keyword", { "fg": s:purple })
 call s:h("Exception", { "fg": s:purple })
-call s:h("PreProc", { "fg": s:blue })
+
+call s:h("PreProc", { "fg": s:yellow })
 call s:h("Include", { "fg": s:blue })
 call s:h("Define", { "fg": s:purple })
 call s:h("Macro", { "fg": s:purple })
 call s:h("PreCondit", { "fg": s:yellow })
+
 call s:h("Type", { "fg": s:yellow })
 call s:h("StorageClass", { "fg": s:yellow })
 call s:h("Structure", { "fg": s:yellow })
 call s:h("Typedef", { "fg": s:yellow })
-call s:h("Special", { "fg": s:white })
+
+call s:h("Special", { "fg": s:blue })
 call s:h("SpecialChar", { "fg": s:dark_yellow })
-call s:h("Tag", { "fg": s:blue })
+call s:h("Tag", { "fg": s:white })
 call s:h("Delimiter", { "fg": s:white })
 call s:h("SpecialComment", { "fg": s:comment_grey })
 call s:h("Debug", {})
+
 call s:h("Underlined", { "gui": "underline", "cterm": "underline" })
+
 call s:h("Ignore", {})
+
 call s:h("Error", { "fg": s:red })
+
 call s:h("Todo", { "fg": s:white })
 " }}}
+
+" Language-Specific Highlighting {{{
+
+" }}}
+
 
 " Highlighting Groups (descriptions and ordering from `:h highlight-groups`) {{{
 call s:h("ColorColumn", { "bg": s:cursor_grey }) " used for the columns set with 'colorcolumn'
@@ -260,9 +276,6 @@ call s:h("WarningMsg", { "fg": s:yellow }) " warning messages
 call s:h("WildMenu", { "fg": s:black, "bg": s:blue }) " current match in 'wildmenu' completion
 " }}}
 
-" Language-Specific Highlighting {{{
-
-" }}}
 
 " Plugin Highlighting {{{
 
