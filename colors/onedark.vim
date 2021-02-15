@@ -245,7 +245,7 @@ call s:h("scalaDocLinks", { "fg": s:special_comment }) " SpecialComment
 call s:h("scalaCommentCodeBlock", { "fg": s:special_comment })
 call s:h("scalaParamAnnotationValue", { "fg": s:special_comment })
 
-call s:h("scalaCaseFollowing", { "fg": s:norma })
+call s:h("scalaCaseFollowing", { "fg": s:normal })
 call s:h("scalaTypeTypePostDeclaration", { "fg": s:normal })
 
 call s:h("scalaSpecial", { "fg": s:blue })
