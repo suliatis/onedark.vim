@@ -164,41 +164,54 @@ let g:terminal_ansi_colors = [
 " Syntax Groups (descriptions and ordering from `:h w18`) {{{
 call s:h("Comment", { "fg": s:comment_grey, "gui": "italic", "cterm": "italic" })
 
-call s:h("Constant", { "fg": s:cyan })
+let s:constant = s:cyan
+call s:h("Constant", { "fg": s:constant })
 
-call s:h("String", { "fg": s:green })
-call s:h("Character", { "fg": s:green })
-call s:h("Number", { "fg": s:dark_yellow })
-call s:h("Boolean", { "fg": s:dark_yellow })
-call s:h("Float", { "fg": s:dark_yellow })
+let s:string = s:green
+let s:literal = s:dark_yellow
+call s:h("String", { "fg": s:string })
+call s:h("Character", { "fg": s:string })
+call s:h("Number", { "fg": s:literal })
+call s:h("Boolean", { "fg": s:literal })
+call s:h("Float", { "fg": s:literal })
 
-call s:h("Identifier", { "fg": s:red })
-call s:h("Function", { "fg": s:blue })
+let s:identifier = s:white
+let s:function = s:blue
+call s:h("Identifier", { "fg": s:identifier })
+call s:h("Function", { "fg": s:function })
 
-call s:h("Statement", { "fg": s:purple })
-call s:h("Conditional", { "fg": s:purple })
-call s:h("Repeat", { "fg": s:purple })
-call s:h("Label", { "fg": s:purple })
-call s:h("Operator", { "fg": s:purple })
-call s:h("Keyword", { "fg": s:purple })
-call s:h("Exception", { "fg": s:purple })
+let s:keyword = s:purple
+call s:h("Statement", { "fg": s:keyword })
+call s:h("Conditional", { "fg": s:keyword })
+call s:h("Repeat", { "fg": s:keyword })
+call s:h("Label", { "fg": s:keyword })
+call s:h("Operator", { "fg": s:keyword })
+call s:h("Keyword", { "fg": s:keyword })
+call s:h("Exception", { "fg": s:keyword })
 
 call s:h("PreProc", { "fg": s:yellow })
 call s:h("Include", { "fg": s:blue })
-call s:h("Define", { "fg": s:purple })
-call s:h("Macro", { "fg": s:purple })
+call s:h("Define", { "fg": s:keyword })
+call s:h("Macro", { "fg": s:keyword })
 call s:h("PreCondit", { "fg": s:yellow })
 
-call s:h("Type", { "fg": s:yellow })
-call s:h("StorageClass", { "fg": s:yellow })
-call s:h("Structure", { "fg": s:yellow })
-call s:h("Typedef", { "fg": s:yellow })
+let s:type = s:yellow
+call s:h("Type", { "fg": s:type })
+call s:h("StorageClass", { "fg": s:type })
+call s:h("Structure", { "fg": s:type })
+call s:h("Typedef", { "fg": s:type })
 
-call s:h("Special", { "fg": s:yellow })
-call s:h("SpecialChar", { "fg": s:dark_yellow })
-call s:h("Tag", { "fg": s:white })
-call s:h("Delimiter", { "fg": s:white })
-call s:h("SpecialComment", { "fg": s:comment_grey })
+let s:special = s:yellow
+let s:special_char = s:dark_yellow
+let s:tag = s:white
+let s:delimeter = s:white
+let s:special_comment = s:white
+call s:h("Special", { "fg": s:special })
+call s:h("SpecialChar", { "fg": s:special_char })
+call s:h("Tag", { "fg": s:tag })
+call s:h("Delimiter", { "fg": s:delimeter })
+call s:h("SpecialComment", { "fg": s:special_comment })
+
 call s:h("Debug", {})
 
 call s:h("Underlined", { "gui": "underline", "cterm": "underline" })
@@ -208,29 +221,32 @@ call s:h("Ignore", {})
 call s:h("Error", { "fg": s:red })
 
 call s:h("Todo", { "fg": s:white })
+
+let s:normal = s:white
 " }}}
 
 " Language-Specific Overrides {{{
 
 " Scala
-hi link scalaInterpolationBrackets String
+call s:h("scalaInterpolationBrackets", { "fg": s:string })
 
-hi link scalaKeywordModifier Keyword
-hi link scalaInstanceHash Operator
+call s:h("scalaKeywordModifier", { "fg": s:keyword })
+call s:h("scalaInstanceHash", { "fg": s:keyword })
 
-hi link scalaEscapedChar SpecialChar
-hi link scalaUnicodeChar SpecialChar
-hi link scalaInterpolationBoundary SpecialChar
-hi link scalaInterpolation SpecialChar
-hi link scalaFInterpolation SpecialChar
-hi link scalaSquareBrackets Delimiter
-hi link scalaSquareBracketsBrackets Delimiter
+call s:h("scalaEscapedChar", { "fg": s:special_char })
+call s:h("scalaUnicodeChar", { "fg": s:special_char })
+call s:h("scalaInterpolationBoundary", { "fg": s:special_char })
+call s:h("scalaInterpolation", { "fg": s:special_char })
+call s:h("scalaFInterpolation", { "fg": s:special_char })
 
-hi link scalaCaseFollowing Normal
-hi link scalaTypeTypePostDeclaration Normal
-hi link scalaDocLinks Normal
-hi link scalaCommentCodeBlock Normal
-hi link scalaParamAnnotationValue Normal
+call s:h("scalaSquareBrackets", { "fg": s:delimeter }) " Delimeter
+call s:h("scalaSquareBracketsBrackets", { "fg": s:delimeter })
+call s:h("scalaDocLinks", { "fg": s:special_comment }) " SpecialComment
+call s:h("scalaCommentCodeBlock", { "fg": s:special_comment })
+call s:h("scalaParamAnnotationValue", { "fg": s:special_comment })
+
+call s:h("scalaCaseFollowing", { "fg": s:norma })
+call s:h("scalaTypeTypePostDeclaration", { "fg": s:normal })
 
 call s:h("scalaSpecial", { "fg": s:blue })
 
