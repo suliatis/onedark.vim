@@ -249,6 +249,14 @@ let s:normal = s:white
  call s:h("cssSelectorOp2", { "fg": s:purple })
  call s:h("cssTagName", { "fg": s:red })
 
+ " Elm
+call s:h("elmLambdaFunc", { "fg": s:identifier })
+
+call s:h("elmLetBlockDefinition", { "fg": s:keyword })
+call s:h("elmTypedef", { "fg": s:keyword })
+call s:h("elmAlias", { "fg": s:keyword })
+ 
+
 " Haskell
 call s:h("haskellIdentifier", { "fg": s:function })
 
