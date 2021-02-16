@@ -189,7 +189,8 @@ call s:h("Operator", { "fg": s:keyword })
 call s:h("Keyword", { "fg": s:keyword })
 call s:h("Exception", { "fg": s:keyword })
 
-call s:h("PreProc", { "fg": s:yellow })
+let s:builtin = s:red
+call s:h("PreProc", { "fg": s:builtin})
 call s:h("Include", { "fg": s:blue })
 call s:h("Define", { "fg": s:keyword })
 call s:h("Macro", { "fg": s:keyword })
@@ -249,7 +250,10 @@ let s:normal = s:white
  call s:h("cssTagName", { "fg": s:red })
 
 " Treesitter
-call s:h("TSVariableBuiltin", { "fg": s:red })
+call s:h("TSVariableBuiltin", { "fg": s:builtin })
+call s:h("TSConstBuiltin", { "fg": s:builtin })
+call s:h("TSFuncBuiltin", { "fg": s:builtin })
+call s:h("TSTypeBuiltin", { "fg": s:builtin })
 call s:h("TSProperty", { "fg": s:dark_yellow })
 
 " Scala
