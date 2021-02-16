@@ -249,6 +249,9 @@ let s:normal = s:white
  call s:h("cssSelectorOp2", { "fg": s:purple })
  call s:h("cssTagName", { "fg": s:red })
 
+" Haskell
+call s:h("haskellIdentifier", { "fg": s:function })
+
 " Treesitter
 call s:h("TSVariableBuiltin", { "fg": s:builtin })
 call s:h("TSConstBuiltin", { "fg": s:builtin })
