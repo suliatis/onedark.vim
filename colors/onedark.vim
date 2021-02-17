@@ -297,6 +297,7 @@ call s:h("vimEnvvar", { "fg": s:constant })
 call s:h("vimOption", { "fg": s:property })
 call s:h("vimFTOption", { "fg": s:property })
 call s:h("vimFunction", { "fg": s:function })
+call s:h("vimUserFunc", { "fg": s:function })
 
 call s:h("vimContinue", { "fg": s:delimeter })
 call s:h("vimCommentTitle", { "fg": s:special_comment })
