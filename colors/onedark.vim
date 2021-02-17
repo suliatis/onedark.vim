@@ -168,7 +168,7 @@ let s:constant = s:cyan
 call s:h("Constant", { "fg": s:constant })
 
 let s:string = s:green
-let s:literal = s:dark_yellow
+let s:literal = s:cyan
 call s:h("String", { "fg": s:string })
 call s:h("Character", { "fg": s:string })
 call s:h("Number", { "fg": s:literal })
@@ -280,9 +280,9 @@ call s:h("scalaUnicodeChar", { "fg": s:special_char })
 call s:h("scalaInterpolationBoundary", { "fg": s:special_char })
 call s:h("scalaInterpolation", { "fg": s:special_char })
 call s:h("scalaFInterpolation", { "fg": s:special_char })
-call s:h("scalaSquareBrackets", { "fg": s:delimeter }) " Delimeter
+call s:h("scalaSquareBrackets", { "fg": s:delimeter })
 call s:h("scalaSquareBracketsBrackets", { "fg": s:delimeter })
-call s:h("scalaDocLinks", { "fg": s:special_comment }) " SpecialComment
+call s:h("scalaDocLinks", { "fg": s:special_comment })
 call s:h("scalaCommentCodeBlock", { "fg": s:special_comment })
 call s:h("scalaParamAnnotationValue", { "fg": s:special_comment })
 
@@ -299,6 +299,7 @@ call s:h("vimFTOption", { "fg": s:property })
 call s:h("vimFunction", { "fg": s:function })
 
 call s:h("vimContinue", { "fg": s:delimeter })
+call s:h("vimCommentTitle", { "fg": s:special_comment })
 
 call s:h("vimNotation", { "fg": s:builtin })
 " }}}
