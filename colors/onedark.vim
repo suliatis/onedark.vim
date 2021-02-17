@@ -172,10 +172,11 @@ let s:literal = s:dark_yellow
 call s:h("String", { "fg": s:string })
 call s:h("Character", { "fg": s:string })
 call s:h("Number", { "fg": s:literal })
-call s:h("Boolean", { "fg": s:literal })
 call s:h("Float", { "fg": s:literal })
+call s:h("Boolean", { "fg": s:literal })
 
 let s:identifier = s:white
+let s:property = s:dark_yellow
 let s:function = s:blue
 call s:h("Identifier", { "fg": s:identifier })
 call s:h("Function", { "fg": s:function })
@@ -190,8 +191,9 @@ call s:h("Keyword", { "fg": s:keyword })
 call s:h("Exception", { "fg": s:keyword })
 
 let s:builtin = s:red
+let s:include = s:blue
 call s:h("PreProc", { "fg": s:builtin})
-call s:h("Include", { "fg": s:blue })
+call s:h("Include", { "fg": s:include })
 call s:h("Define", { "fg": s:keyword })
 call s:h("Macro", { "fg": s:keyword })
 call s:h("PreCondit", { "fg": s:yellow })
@@ -255,17 +257,17 @@ call s:h("elmLambdaFunc", { "fg": s:identifier })
 call s:h("elmLetBlockDefinition", { "fg": s:keyword })
 call s:h("elmTypedef", { "fg": s:keyword })
 call s:h("elmAlias", { "fg": s:keyword })
- 
 
 " Haskell
 call s:h("haskellIdentifier", { "fg": s:function })
 
 " Treesitter
+call s:h("TSProperty", { "fg": s:property })
+
 call s:h("TSVariableBuiltin", { "fg": s:builtin })
 call s:h("TSConstBuiltin", { "fg": s:builtin })
 call s:h("TSFuncBuiltin", { "fg": s:builtin })
 call s:h("TSTypeBuiltin", { "fg": s:builtin })
-call s:h("TSProperty", { "fg": s:dark_yellow })
 
 " Scala
 call s:h("scalaInterpolationBrackets", { "fg": s:string })
@@ -278,7 +280,6 @@ call s:h("scalaUnicodeChar", { "fg": s:special_char })
 call s:h("scalaInterpolationBoundary", { "fg": s:special_char })
 call s:h("scalaInterpolation", { "fg": s:special_char })
 call s:h("scalaFInterpolation", { "fg": s:special_char })
-
 call s:h("scalaSquareBrackets", { "fg": s:delimeter }) " Delimeter
 call s:h("scalaSquareBracketsBrackets", { "fg": s:delimeter })
 call s:h("scalaDocLinks", { "fg": s:special_comment }) " SpecialComment
@@ -288,8 +289,18 @@ call s:h("scalaParamAnnotationValue", { "fg": s:special_comment })
 call s:h("scalaCaseFollowing", { "fg": s:normal })
 call s:h("scalaTypeTypePostDeclaration", { "fg": s:normal })
 
-call s:h("scalaSpecial", { "fg": s:blue })
+call s:h("scalaSpecial", { "fg": s:function })
 
+" Vim
+call s:h("vimEnvvar", { "fg": s:constant })
+
+call s:h("vimOption", { "fg": s:property })
+call s:h("vimFTOption", { "fg": s:property })
+call s:h("vimFunction", { "fg": s:function })
+
+call s:h("vimContinue", { "fg": s:delimeter })
+
+call s:h("vimNotation", { "fg": s:builtin })
 " }}}
 
 
