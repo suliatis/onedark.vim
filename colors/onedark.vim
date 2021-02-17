@@ -381,20 +381,30 @@ call s:h("ALEWarning", { "fg": s:yellow, "gui": "underline", "cterm": "underline
 call s:h("ALEInfo", { "gui": "underline", "cterm": "underline"})
 
 " fzf
+execute 'hi! fzf_fg ctermfg=' . s:white.cterm
+execute 'hi! fzf_bg ctermbg='. s:black.cterm
+execute 'hi! fzf_hl ctermfg='. s:comment_grey.cterm
+execute 'hi! fzf_bgp ctermbg='. s:cursor_grey.cterm
+execute 'hi! fzf_pointer ctermfg=' . s:red.cterm
+execute 'hi! fzf_info ctermfg=' . s:comment_grey.cterm
+execute 'hi! fzf_prompt ctermfg=' . s:blue.cterm
+execute 'hi! fzf_spinner ctermfg=' . s:purple.cterm
+
 let g:fzf_colors = {
-  \ 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
+  \ 'fg':      ['fg', 'fzf_fg'],
+  \ 'bg':      ['bg', 'fzf_bg'],
+  \ 'hl':      ['fg', 'fzf_hl'],
+  \ 'fg+':     ['fg', 'fzf_fg'],
+  \ 'bg+':     ['bg', 'fzf_bgp'],
+  \ 'hl+':     ['fg', 'fzf_hl'],
+  \ 'gutter':  ['bg', 'fzf_bg'],
+  \ 'pointer': ['fg', 'fzf_pointer'],
+  \ 'marker':  ['fg', 'fzf_pointer'],
   \ 'border':  ['fg', 'Ignore'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment']
+  \ 'header':  ['fg', 'fzf_fg'],
+  \ 'info':    ['fg', 'fzf_info'],
+  \ 'prompt':  ['fg', 'fzf_prompt'],
+  \ 'spinner': ['fg', 'fzf_spinner'],
   \ }
 
 " tpope/vim-fugitive
