@@ -241,7 +241,11 @@ call s:h("elmAlias", { "fg": s:keyword })
 call s:h("haskellIdentifier", { "fg": s:function })
 
 " Treesitter
+call s:h("TSConstant", { "fg": s:constant })
+call s:h("TSConstMacro", { "fg": s:constant })
+
 call s:h("TSProperty", { "fg": s:property })
+call s:h("TSLabel", { "fg": s:property })
 
 call s:h("TSVariableBuiltin", { "fg": s:builtin })
 call s:h("TSConstBuiltin", { "fg": s:builtin })
