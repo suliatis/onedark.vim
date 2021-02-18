@@ -237,6 +237,9 @@ call s:h("elmLetBlockDefinition", { "fg": s:keyword })
 call s:h("elmTypedef", { "fg": s:keyword })
 call s:h("elmAlias", { "fg": s:keyword })
 
+" Godot
+call s:h("gdMember", { "fg": s:property })
+
 " Haskell
 call s:h("haskellIdentifier", { "fg": s:function })
 
