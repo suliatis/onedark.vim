@@ -380,24 +380,6 @@ call s:h("ALEError", { "fg": s:red, "gui": "underline", "cterm": "underline" })
 call s:h("ALEWarning", { "fg": s:yellow, "gui": "underline", "cterm": "underline"})
 call s:h("ALEInfo", { "gui": "underline", "cterm": "underline"})
 
-" fzf
-let g:fzf_colors = {
-  \ 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine'],
-  \ 'hl+':     ['fg', 'Comment'],
-  \ 'gutter':  ['bg', 'Normal'],
-  \ 'pointer': ['fg', 'PreProc'],
-  \ 'marker':  ['fg', 'PreProc'],
-  \ 'border':  ['fg', 'Ignore'],
-  \ 'header':  ['fg', 'Ignore'],
-  \ 'info':    ['fg', 'Comment'],
-  \ 'prompt':  ['fg', 'Function'],
-  \ 'spinner': ['fg', 'Keyword'],
-  \ }
-
 " tpope/vim-fugitive
 call s:h("diffAdded", { "fg": s:green })
 call s:h("diffRemoved", { "fg": s:red })
