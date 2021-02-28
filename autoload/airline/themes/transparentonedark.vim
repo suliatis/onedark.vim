@@ -2,8 +2,8 @@ function! airline#themes#transparentonedark#refresh()
   let s:colors = onedark#GetColors()
 
   " Normal mode
-  let s:N1 = [s:colors.white.gui, s:colors.visual_black.gui, s:colors.white.cterm, s:colors.comment_grey.cterm]
-  let s:N3 = [s:colors.comment_grey.gui, s:colors.visual_black.gui, s:colors.comment_grey.cterm, s:colors.visual_black.cterm]
+  let s:N1 = [s:colors.white.gui, s:colors.visual_black.gui, s:colors.white.cterm, s:colors.gutter_fg_grey.cterm]
+  let s:N3 = [s:colors.gutter_fg_grey.gui, s:colors.visual_black.gui, s:colors.gutter_fg_grey.cterm, s:colors.visual_black.cterm]
 
   " Normal mode - modified
   let s:NM1 = [s:colors.black.gui, s:colors.dark_yellow.gui, s:colors.black.cterm, s:colors.dark_yellow.cterm]
@@ -23,7 +23,7 @@ function! airline#themes#transparentonedark#refresh()
 
   " Inactive pane
   let s:IA = [s:colors.black.gui, s:colors.visual_black.gui, s:colors.visual_black.cterm, s:colors.visual_black.cterm]
-  let s:IAc = [s:colors.comment_grey.gui, s:colors.visual_black.gui, s:colors.visual_black.cterm, s:colors.visual_black.cterm]
+  let s:IAc = [s:colors.gutter_fg_grey.gui, s:colors.visual_black.gui, s:colors.visual_black.cterm, s:colors.visual_black.cterm]
 
   let g:airline#themes#transparentonedark#palette = {}
 

@@ -110,7 +110,6 @@ let s:comment_grey = s:colors.comment_grey
 let s:gutter_fg_grey = s:colors.gutter_fg_grey
 let s:cursor_grey = s:colors.cursor_grey
 let s:visual_grey = s:colors.visual_grey
-let s:menu_grey = s:colors.menu_grey
 let s:special_grey = s:colors.special_grey
 let s:vertsplit = s:colors.vertsplit
 
@@ -292,7 +291,7 @@ call s:h("ModeMsg", {}) " 'showmode' message (e.g., "-- INSERT --")
 call s:h("MoreMsg", {}) " more-prompt
 call s:h("NonText", { "fg": s:special_grey }) " '~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
 call s:h("Normal", { "fg": s:white, "bg": s:black }) " normal text
-call s:h("Pmenu", { "bg": s:menu_grey }) " Popup menu: normal item.
+call s:h("Pmenu", { "bg": s:visual_grey }) " Popup menu: normal item.
 call s:h("PmenuSel", { "fg": s:black, "bg": s:blue }) " Popup menu: selected item.
 call s:h("PmenuSbar", { "bg": s:special_grey }) " Popup menu: scrollbar.
 call s:h("PmenuThumb", { "bg": s:white }) " Popup menu: Thumb of the scrollbar.
