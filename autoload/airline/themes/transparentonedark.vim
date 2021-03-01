@@ -37,7 +37,7 @@ function! airline#themes#transparentonedark#refresh()
   let g:airline#themes#transparentonedark#palette.replace_modified = {}
 
   let g:airline#themes#transparentonedark#palette.inactive = airline#themes#generate_color_map(s:IA, s:IA, s:IAc, s:IA, s:IA, s:IA)
-  let g:airline#themes#transparentonedark#palette.inactive_modified = airline#themes#generate_color_map(s:IA, s:IA, s:NM3, s:IA, s:IA, s:IA)
+  let g:airline#themes#transparentonedark#palette.inactive_modified = airline#themes#generate_color_map(s:IA, s:IA, s:I1, s:IA, s:IA, s:IA)
 
   " Warnings
   let s:WI = [s:colors.yellow.gui, s:colors.visual_black.gui, s:colors.yellow.cterm, s:colors.visual_black.cterm]
