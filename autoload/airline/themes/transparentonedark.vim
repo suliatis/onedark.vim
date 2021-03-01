@@ -6,12 +6,12 @@ function! airline#themes#transparentonedark#refresh()
   let s:N3 = [s:colors.comment_grey.gui, s:colors.visual_black.gui, s:colors.comment_grey.cterm, s:colors.visual_black.cterm]
 
   " Normal mode - modified
-  let s:NM1 = [s:colors.black.gui, s:colors.dark_yellow.gui, s:colors.black.cterm, s:colors.dark_yellow.cterm]
-  let s:NM3 = [s:colors.dark_yellow.gui, s:colors.visual_black.gui, s:colors.dark_yellow.cterm, s:colors.black.cterm]
+  let s:NM1 = [s:colors.black.gui, s:colors.yellow.gui, s:colors.black.cterm, s:colors.yellow.cterm]
+  let s:NM3 = [s:colors.yellow.gui, s:colors.visual_black.gui, s:colors.yellow.cterm, s:colors.black.cterm]
 
   " Insert mode
-  let s:I1 = [s:colors.black.gui, s:colors.dark_yellow.gui, s:colors.white.cterm, s:colors.dark_yellow.cterm]
-  let s:I3 = [s:colors.dark_yellow.gui  , s:colors.visual_black.gui, s:colors.dark_yellow.cterm, s:colors.visual_black.cterm]
+  let s:I1 = [s:colors.black.gui, s:colors.yellow.gui, s:colors.white.cterm, s:colors.yellow.cterm]
+  let s:I3 = [s:colors.yellow.gui  , s:colors.visual_black.gui, s:colors.yellow.cterm, s:colors.visual_black.cterm]
 
   " Visual mode
   let s:V1 = [s:colors.black.gui, s:colors.purple.gui, s:colors.white.cterm, s:colors.purple.cterm]
@@ -47,7 +47,7 @@ function! airline#themes#transparentonedark#refresh()
   let g:airline#themes#transparentonedark#palette.inactive_modified = airline#themes#generate_color_map(s:IA, s:IA, s:NM3, s:IA, s:IA, s:IA)
 
   " Warnings
-  let s:WI = [s:colors.black.gui, s:colors.dark_yellow.gui, s:colors.white.cterm, s:colors.dark_yellow.cterm]
+  let s:WI = [s:colors.black.gui, s:colors.yellow.gui, s:colors.white.cterm, s:colors.yellow.cterm]
   let g:airline#themes#transparentonedark#palette.normal.airline_warning = s:WI
 
   let g:airline#themes#transparentonedark#palette.normal_modified.airline_warning =
@@ -72,7 +72,7 @@ function! airline#themes#transparentonedark#refresh()
       \ g:airline#themes#transparentonedark#palette.normal.airline_warning
 
   " Errors
-  let s:ER = [s:colors.black.gui, s:colors.red.gui, s:colors.white.cterm, s:colors.red.cterm]
+  let s:ER = [s:colors.black.gui, s:colors.dark_red.gui, s:colors.white.cterm, s:colors.dark_red.cterm]
   let g:airline#themes#transparentonedark#palette.normal.airline_error = s:ER
 
   let g:airline#themes#transparentonedark#palette.normal_modified.airline_error =
