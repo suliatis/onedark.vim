@@ -10,15 +10,15 @@ function! airline#themes#transparentonedark#refresh()
   let s:NM3 = [s:colors.yellow.gui, s:colors.visual_black.gui, s:colors.yellow.cterm, s:colors.black.cterm]
 
   " Insert mode
-  let s:I1 = [s:colors.black.gui, s:colors.yellow.gui, s:colors.black.cterm, s:colors.yellow.cterm]
+  let s:I1 = [s:colors.black.gui, s:colors.yellow.gui, s:colors.white.cterm, s:colors.yellow.cterm]
   let s:I3 = [s:colors.yellow.gui  , s:colors.visual_black.gui, s:colors.yellow.cterm, s:colors.visual_black.cterm]
 
   " Visual mode
-  let s:V1 = [s:colors.black.gui, s:colors.purple.gui, s:colors.black.cterm, s:colors.purple.cterm]
+  let s:V1 = [s:colors.black.gui, s:colors.purple.gui, s:colors.white.cterm, s:colors.purple.cterm]
   let s:V3 = [s:colors.purple.gui, s:colors.visual_black.gui, s:colors.purple.cterm, s:colors.visual_black.cterm]
 
   " Replace mode
-  let s:R1 = [s:colors.black.gui, s:colors.blue.gui, s:colors.black.cterm, s:colors.blue.cterm]
+  let s:R1 = [s:colors.black.gui, s:colors.blue.gui, s:colors.white.cterm, s:colors.blue.cterm]
   let s:R3 = [s:colors.blue.gui, s:colors.visual_black.gui, s:colors.blue.cterm, s:colors.visual_black.cterm]
 
   " Inactive pane
@@ -47,7 +47,7 @@ function! airline#themes#transparentonedark#refresh()
   let g:airline#themes#transparentonedark#palette.inactive_modified = airline#themes#generate_color_map(s:IA, s:IA, s:NM3, s:IA, s:IA, s:IA)
 
   " Warnings
-  let s:WI = [s:colors.black.gui, s:colors.yellow.gui, s:colors.black.cterm, s:colors.yellow.cterm]
+  let s:WI = [s:colors.black.gui, s:colors.yellow.gui, s:colors.white.cterm, s:colors.yellow.cterm]
   let g:airline#themes#transparentonedark#palette.normal.airline_warning = s:WI
 
   let g:airline#themes#transparentonedark#palette.normal_modified.airline_warning =
